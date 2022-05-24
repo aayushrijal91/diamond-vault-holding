@@ -1,0 +1,41 @@
+{
+    "name": "wordpress-dev-theme",
+    "version": "1.0.0",
+    "description": "",
+    "main": "gulpfile.js",
+    "devDependencies": {
+        "browser-sync": "^2.26.7",
+        "del": "^5.0.0",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^6.1.0",
+        "gulp-cached": "^1.1.1",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-cssnano": "^1.1.0",
+        "gulp-imagemin": "^6.0.0",
+        "gulp-minify": "^3.1.0",
+        "gulp-sass": "^4.1.0",
+        "gulp-sourcemaps": "^2.6.5",
+        "gulp-uglify": "^3.0.2"
+    },
+    "dependencies": {
+        "bootstrap": "^4.4.1",
+        "node-sass": "^4.14.0",
+        "nodemon": "^2.0.7"
+    },
+    "scripts": {
+        "start": "nodemon --exec \"gulp watch\" --watch ./gulpfile.js",
+        "build": "gulp build --production"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aayushrijal91/dev_boilerplate_html"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/aayushrijal91/dev_boilerplate_html/issues"
+    },
+    "homepage": "https://github.com/aayushrijal91/dev_boilerplate_html#README"
+}

@@ -1,0 +1,80 @@
+@function imgUrl($file, $path: "background") {
+    @return url("../images/" + $path + "/" + $file) no-repeat;
+}
+
+body {
+    font-family: $font-body;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media-breakpoint-up(md) {
+        height: 100vh;
+    }
+}
+
+section {
+    width: 920px;
+    height: 549px;
+    background: linear-gradient(90deg, #1D1D1D 48.44%, rgba(45, 45, 45, 0.73) 68.23%, rgba(45, 45, 45, 0) 88.54%),
+        imgUrl("herobg.png") right bottom;
+    position: relative;
+
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
+
+    @include media-breakpoint-down(sm) {
+        background: linear-gradient(0deg, #1D1D1D 23.96%, rgba(45, 45, 45, 0.73) 46.87%, rgba(45, 45, 45, 0) 76.56%), imgUrl("herobg-sm.png") right top;
+        background-size: contain;
+        height: 87vh;
+    }
+
+    .section-inner {
+        background: rgba(34, 34, 34, 0.36);
+        height: 100%;
+
+        .hero-heading {
+            color: white;
+            letter-spacing: 0.15em;
+            font-size: 42px;
+            text-transform: uppercase;
+            font-weight: 300;
+            text-align: center;
+
+            @include media-breakpoint-down(sm) {
+                font-size: 30px;
+            }
+        }
+
+        hr {
+            background-color: white;
+        }
+
+        .info {
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            font-size: 10px;
+            line-height: 2;
+        }
+    }
+
+    .watch {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        @include media-breakpoint-down(md) {
+            img {
+                max-width: 80%;
+            }
+        }
+    }
+}
